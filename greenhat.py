@@ -32,7 +32,7 @@ def main(argv):
 		num_commits = randint(1, 10)
 		for commit in range(0, num_commits):
 			subprocess.call("echo '" + curdate + str(randint(0, 1000000)) +"' > realwork.txt; git add realwork.txt; GIT_AUTHOR_DATE='" + curdate + "' GIT_COMMITTER_DATE='" + curdate + "' git commit -m 'update'; ", shell=True)
-			sleep(.5)
+			#sleep(.5)
 		i += 1
 	subprocess.call("git rm realwork.txt; git commit -m 'delete'; ", shell=True)
 
